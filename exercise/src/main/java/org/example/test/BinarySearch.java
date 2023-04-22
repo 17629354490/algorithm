@@ -16,11 +16,11 @@ public class BinarySearch {
      */
     public static int binarySearchBasic(int[] a, int target) {
         int i = 0;
-        int j = a.length - 1;
-        while (i <= j) {
+        int j = a.length;
+        while (i < j) {
             int m = (i + j) >>> 1;
             if (target < a[m]) {
-                j = m - 1;
+                j = m;
             } else if (a[m] < target) {
                 i = m + 1;
             } else {
